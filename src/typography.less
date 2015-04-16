@@ -1,0 +1,64 @@
+@import "colors.less";
+
+@mother-family: 'Open Sans', sans-serif;
+
+a {
+    color: @link-color;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    font-family: @mother-family;
+    margin-bottom: 0;
+
+    small {
+        font-size: 50%;
+        color: lighten(@mother-gray, 20%)
+    }
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: 700;
+
+    & + .annotation {
+        font-family: @mother-family;
+        font-weight: 300;
+        font-size: 0.9em;
+        margin-top: 0;
+    }
+}
+
+h2 {
+    font-size: 1.75em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+p {
+    font-family: @mother-family;
+    font-size: 0.9em;
+    line-height: 1.25em;
+
+    margin-top: 0.75em;
+}
+
+code {
+    font-family: "Monospace", "Courier";
+    padding: .1rem .2rem;
+    margin: 0 .1rem;
+    font-size: 90%;
+    white-space: nowrap;
+    background: #F1F1F1;
+    border: 1px solid #E1E1E1;
+    border-radius: 4px;
+}
+
+* {
+    font-family: @mother-family;
+}

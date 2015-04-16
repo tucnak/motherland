@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Motherland CSS</title>
+    <link rel="stylesheet" href="lib/motherland.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,700,400' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            margin-bottom: 20rem;
+        }
+
+        .grid-demo {
+            width: 75%;
+
+            font-size: 0.75em;
+        }
+
+        .grid-demo .unit > div {
+            min-height: 30px;
+            text-align: center;
+            line-height: 3em;
+
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="huge container">
+        <h1>Motherland CSS</h1>
+        <p class="annotation">A lightweight CSS framework for the real men!</p>
+    </div>
+    <hr class="put lower">
+    <div class="container">
+        <section class="about">
+            <h2>What's the Hell?</h2>
+            <p>Motherland is a dead simple modern technology, which do reckon with the old school. We are damn pissed off by css hipsters and all the new sorts of crap appearing online every single day. Material design, huh? Bootstrap? Pure.css, whatever. We are men, not a bunch of creepy hippy. We want to deliver user some information without web3.0-ish maroon interface.</p>
+            <p>From the developer's perspective, Motherland is designed to be <strong>super</strong> intuitive, so the whole markup thing looks logical and clear for anyone looking at the source code of your project. You guys are fighting at the front of user experience, where little mistakes do matter. Your task is to create user interface that will feel smooth for the end user. Right now, go on and just ask yourself, would you want your users to get distracted with some hippy shit? &mdash; We don't.</p>
+        </section>
+        <section class="grid">
+            <h2>Grid</h2>
+            <p>We stick to the subdivisional grid layout system, which recommended itself as a solid solution for applications of different scale: starting with demonstration pages like this, finishing with complex web application. You are supposed to divide container with <code>whole</code>, <code>half</code>, <code>thirds</code> and <code>fifths</code> classes and corresponding fraction number. Here is a demo for <code>fifths</code> fractioning:</p>
+            <div class="bearing grid-demo">
+                <div class="unit">
+                    <div class="one fifth">.one.fifth</div>
+                    <div class="four fifths">.four.fifths</div>
+                </div>
+                <div class="unit">
+                    <div class="two fifths">.two.fifths</div>
+                    <div class="three fifths">.three.fifths</div>
+                </div>
+                <div class="unit">
+                    <div class="three fifths">.three.fifths</div>
+                    <div class="two fifths">.two.fifths</div>
+                </div>
+                <div class="unit">
+                    <div class="four fifths">.four.fifths</div>
+                    <div class="one fifth">.one.fifth</div>
+                </div>
+            </div>
+            <p>Each subdivided row is represented <code>.unit</code> block, containing fractional blocks. Each <code>.unit</code> block will take maximum space. We also prefer to not bother you guys with default paddings and margins, because they irritate everybody so much. Here is an example of complicated markup, which shows the point of combining different subdivisions:</p>
+            <div class="bearing grid-demo">
+                <div class="unit">
+                    <div class="two third">
+                        <div class="unit">
+                            <div class="three fifths">.three.fifths</div>
+                            <div class="two fifths">.two.fifths</div>
+                        </div>
+                    </div>
+                    <div class="one third">.one.third</div>
+                </div>
+                <div class="unit">
+                    <div class="one half">.one.half</div>
+                    <div class="one half">
+                        <div class="unit">
+                            <div class="one third">.one.third</div>
+                            <div class="one third">.one.third</div>
+                            <div class="one third">.one.third</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>The main reason to use subdivisional system, not column-driven, comes from the point that subdivisions are much more native than columns approach. While developing the user interface, columns might appear distracting, while subdivisions feel smooth. A few words about <code>.row</code> class, that is common in most CSS frameworks around. We don't find it native at all, especially for complicated layout cases, that's why we label such block with a <code>.unit</code> class.</p>
+        </section>
+    </div>
+</body>
+</html>
