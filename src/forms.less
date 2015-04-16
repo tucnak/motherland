@@ -1,0 +1,149 @@
+form {
+    line-height: 0.75em;
+    overflow: hidden!important;
+
+    label {
+        display: block;
+        font-size: 0.8em;
+        color: @text-color;
+        margin-bottom: 2px;
+    }
+
+    div.button.box {
+        float: right;
+        padding-right: @grid-spacing;
+        margin-top: @grid-spacing;
+
+        button {
+            vertical-align: middle;
+
+            margin-left: @grid-spacing;
+        }
+
+        button:first-child {
+            margin-left: 0;
+        }
+    }
+
+    p {
+        margin-top: 0 0 1em 0;
+        padding: 0;
+    }
+}
+
+input {
+    clear: both;
+
+    &[type=text], &[type=password] {
+        box-sizing: border-box;
+        min-height: 1.75em;
+        max-width: 100%;
+        width: 100%;
+        padding: 4px;
+
+        background: @input-bgcolor;
+        border: 1px solid #e9e9e9;
+        border-top-color: #cccccc;
+        border-radius: 2px;
+        outline: 1px solid transparent;
+        outline-offset: -2px;
+        box-shadow: inset 0 0 0 1px transparent;
+        transition: all 0.3s ease;
+
+        font-family: "Courier New", "Courier", "Verdana";
+        font-size: 1em;
+        color: #000;
+
+        &:focus {
+            outline: 1px solid @input-outline;
+            outline-offset: -2px;
+        }
+    }
+
+    &[type=radio], &[type=checkbox] {
+        position: absolute;
+        z-index: -9000;
+        left: -9000px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+
+        & + label {
+            font-family: @mother-family;
+            font-size: 0.9rem;
+            color: @text-color;
+
+            padding-left: 24px;
+            height: 16px;
+            display: inline-block;
+            line-height: 16px;
+            background-repeat: no-repeat;
+            vertical-align: middle;
+            cursor: pointer;
+            clear: both;
+
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+
+            &:before {
+                position: absolute;
+                left: 0px;
+                display: block;
+                width: 16px;
+                height: 16px;
+                content: "";
+            }
+        }
+    }
+
+    &[type=radio] {
+        & + label:before {
+            .sprite(0, 0);
+        }
+
+        &:checked + label:before {
+            background-position: 0 -16px;
+        }
+    }
+
+    &[type=checkbox] {
+        & + label:before {
+            .sprite(16px, 0);
+        }
+
+        &:checked + label:before {
+            background-position: 16px -16px;
+        }
+    }
+}
+
+textarea {
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+    height: 20em;
+    padding: 4px;
+
+    background: @input-bgcolor;
+    border: 1px solid #e9e9e9;
+    border-top-color: #cccccc;
+    border-radius: 2px;
+    outline:1px solid transparent;
+    outline-offset:-2px;
+    box-shadow: inset 0 0 0 1px transparent;
+    transition: all 0.3s ease;
+
+    font-family: "Courier New", "Courier", "Verdana";
+    font-size: 1em;
+    color:#000!important;
+
+    &:focus {
+        border-color: @text-color;
+    }
+}

@@ -12,7 +12,6 @@
 
         .grid-demo {
             width: 75%;
-
             font-size: 0.75em;
         }
 
@@ -22,6 +21,14 @@
             line-height: 3em;
 
             border: 1px solid #ccc;
+        }
+
+        .grid-demo .unit .unit {
+            margin: 0;
+        }
+
+        .form-demo .unit {
+            margin-top: 0.1em;
         }
     </style>
 </head>
@@ -81,6 +88,66 @@
                 </div>
             </div>
             <p>The main reason to use subdivisional system, not column-driven, comes from the point that subdivisions are much more native than columns approach. While developing the user interface, columns might appear distracting, while subdivisions feel smooth. A few words about <code>.row</code> class, that is common in most CSS frameworks around. We don't find it native at all, especially for complicated layout cases, that's why we label such block with a <code>.unit</code> class.</p>
+        </section>
+        <section class="buttons">
+            <h2>Forms</h2>
+            <p>That's where old good school comes in. Aren't you tired with all the smoothy-fuzzy roundy-poundy modern input fields and all that? &mdash; We are. Here are some adorable design solutions that you must like!</p>
+            <div class="bearing form-demo">
+                <form action="">
+                    <div class="unit">
+                        <div class="one half">
+                            <label for="foo">Field</label>
+                            <input type="text" id="foo" />
+                        </div>
+                        <div class="one half">
+                            <label for="bar">Heheuhe</label>
+                            <input type="text" id="bar">
+                        </div>
+                    </div>
+                    <div class="unit">
+                        <div class="one half">
+                            <label for="check_triple">
+                                <input name="mlg" id="check_triple" type="radio">
+                                <label for="check_triple">Baby a triple! Oh, oh, oh my God!!1</label>
+                            </label>
+                            <label for="check_damn">
+                                <input name="mlg" id="check_damn" type="radio">
+                                <label for="check_damn">Damn son! Dat was 2 hard 4 you...</label>
+                            </label>
+                        </div>
+                        <div class="one half">
+                            <div class="unit">
+                                <div class="one half">
+                                    <input id="take_the_camera" type="checkbox">
+                                    <label for="take_the_camera">Mom, take the camera!</label>
+                                </div>
+                                <div class="one half">
+                                    <input id="bjarne" type="checkbox">
+                                    <label for="bjarne">Bjarne Stroustrup is a God!</label>
+                                </div>
+                            </div>
+                            <div class="unit">
+                                <div class="one half">
+                                    <input id="headshot" type="checkbox">
+                                    <label for="headshot">Headshot?</label>
+                                </div>
+                                <div class="one half">
+                                    <input id="noscope" type="checkbox">
+                                    <label for="noscope">Mama noscope NOSCOPE!</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="unit">
+                        <label for="area">Feedback</label>
+                        <textarea id="area"></textarea>
+                    </div>
+                    <div class="button box">
+                        <button type="button">God damn!</button>
+                        <button class="primary" type="button">Submit</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </div>
 </body>
