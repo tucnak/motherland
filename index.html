@@ -27,8 +27,8 @@
             margin: 0;
         }
 
-        .form-demo .unit {
-            margin-top: 0.1em;
+        .form-demo {
+            width: 75%;
         }
     </style>
 </head>
@@ -39,12 +39,12 @@
     </div>
     <hr class="put lower">
     <div class="container">
-        <section class="about">
+        <section name="about">
             <h2>What's the Hell?</h2>
             <p>Motherland is a dead simple modern technology, which do reckon with the old school. We are damn pissed off by css hipsters and all the new sorts of crap appearing online every single day. Material design, huh? Bootstrap? Pure.css, whatever. We are men, not a bunch of creepy hippy. We want to deliver user some information without web3.0-ish maroon interface.</p>
             <p>From the developer's perspective, Motherland is designed to be <strong>super</strong> intuitive, so the whole markup thing looks logical and clear for anyone looking at the source code of your project. You guys are fighting at the front of user experience, where little mistakes do matter. Your task is to create user interface that will feel smooth for the end user. Right now, go on and just ask yourself, would you want your users to get distracted with some hippy shit? &mdash; We don't.</p>
         </section>
-        <section class="grid">
+        <section name="grid">
             <h2>Grid</h2>
             <p>We stick to the subdivisional grid layout system, which recommended itself as a solid solution for applications of different scale: starting with demonstration pages like this, finishing with complex web application. You are supposed to divide container with <code>whole</code>, <code>half</code>, <code>thirds</code> and <code>fifths</code> classes and corresponding fraction number. Here is a demo for <code>fifths</code> fractioning:</p>
             <div class="bearing grid-demo">
@@ -89,65 +89,76 @@
             </div>
             <p>The main reason to use subdivisional system, not column-driven, comes from the point that subdivisions are much more native than columns approach. While developing the user interface, columns might appear distracting, while subdivisions feel smooth. A few words about <code>.row</code> class, that is common in most CSS frameworks around. We don't find it native at all, especially for complicated layout cases, that's why we label such block with a <code>.unit</code> class.</p>
         </section>
-        <section class="buttons">
+        <section name="buttons">
             <h2>Forms</h2>
-            <p>That's where old good school comes in. Aren't you tired with all the smoothy-fuzzy roundy-poundy modern input fields and all that? &mdash; We are. Here are some adorable design solutions that you must like!</p>
+            <p>That's where old good school comes in. Aren't you tired with all the smoothy-fuzzy roundy-poundy modern input fields and all that? &mdash; We are. Here are some adorable design solutions that you must like! Let's come up with common case, where you might need some forms'n'controls, for instance, a preferences page. We do override all styles for most controls, such as: <code>text</code>, <code>checkbox</code>, <code>radio</code> to fit the old school "feel".</p>
             <div class="bearing form-demo">
-                <form action="">
-                    <div class="unit">
-                        <div class="one half">
-                            <label for="foo">Field</label>
-                            <input type="text" id="foo" />
-                        </div>
-                        <div class="one half">
-                            <label for="bar">Heheuhe</label>
-                            <input type="text" id="bar">
-                        </div>
-                    </div>
-                    <div class="unit">
-                        <div class="one half">
-                            <label for="check_triple">
-                                <input name="mlg" id="check_triple" type="radio">
-                                <label for="check_triple">Baby a triple! Oh, oh, oh my God!!1</label>
-                            </label>
-                            <label for="check_damn">
-                                <input name="mlg" id="check_damn" type="radio">
-                                <label for="check_damn">Damn son! Dat was 2 hard 4 you...</label>
-                            </label>
-                        </div>
-                        <div class="one half">
-                            <div class="unit">
-                                <div class="one half">
-                                    <input id="take_the_camera" type="checkbox">
-                                    <label for="take_the_camera">Mom, take the camera!</label>
-                                </div>
-                                <div class="one half">
-                                    <input id="bjarne" type="checkbox">
-                                    <label for="bjarne">Bjarne Stroustrup is a God!</label>
-                                </div>
+                <form>
+                    <section name="userinfo">
+                        <h5>Hehehue</h5>
+                        <div class="unit">
+                            <div class="one half">
+                                <label for="info-name">Name</label>
+                                <input id="info-name" type="text" placeholder="Pablo">
                             </div>
-                            <div class="unit">
-                                <div class="one half">
-                                    <input id="headshot" type="checkbox">
-                                    <label for="headshot">Headshot?</label>
-                                </div>
-                                <div class="one half">
-                                    <input id="noscope" type="checkbox">
-                                    <label for="noscope">Mama noscope NOSCOPE!</label>
-                                </div>
+                            <div class="one half">
+                                <label for="info-surname">Surname</label>
+                                <input id="info-surname" type="text" placeholder="Picaso">
                             </div>
                         </div>
-                    </div>
-                    <div class="unit">
-                        <label for="area">Feedback</label>
-                        <textarea id="area"></textarea>
-                    </div>
+                        <div class="unit">
+                            <label for="info-mail" class="required">Mailbox</label>
+                            <input id="info-mail" type="email" placeholder="picaso@lemonade.net">
+                            <p class="annotation">Try to use your REAL email here, don't disappoint us.</p>
+                        </div>
+                        <div class="unit">
+                            <h6>Gender</h6>
+                            <div class="option">
+                                <input type="radio" name="gender" id="gender-male">
+                                <label for="gender-male">Male</label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" name="gender" id="gender-female">
+                                <label for="gender-female">Female</label>
+                            </div>
+                        </div>
+                        <div class="unit">
+                            <label for="info-about">Bio</label>
+                            <textarea name="about" id="info-about" placeholder=""></textarea>
+                        </div>
+                    </section>
+                    <section name="flags">
+                        <h5>A few options</h5>
+                        <div class="unit">
+                            <div class="option">
+                                <input id="option-digest" type="checkbox" checked>
+                                <label for="option-digest">Recieve weekly digest with all great new stuff</label>
+                            </div>
+                            <div class="option">
+                                <input id="option-customstyle" type="checkbox" checked>
+                                <label for="option-customstyle">Allow custom style for user blogs</label>
+                            </div>
+                            <div class="option">
+                                <input id="option-amount" type="checkbox" checked>
+                                <label for="option-amount">By default, save all changes every &nbsp;
+                                    <select name="select-amount" id="option-amount">
+                                        <option value="5">5 sec</option>
+                                        <option value="10">10 sec</option>
+                                        <option value="30">30 sec</option>
+                                        <option value="60">1 min</option>
+                                        <option value="600">10 min</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                    </section>
                     <div class="button box">
-                        <button type="button">God damn!</button>
-                        <button class="primary" type="button">Submit</button>
+                        <button type="button" disabled="1">Exit</button>
+                        <button type="button" class="primary">SAVE'N'APPLY</button>
                     </div>
                 </form>
             </div>
+            <p>We have to kinds of buttons here: regular and primary. Primary buttons are bigger and color-accented, while regular buttons just look like regular buttons: nothing less, nothing moe. Disabled buttons, obviously, look dimmed and kinda unfriendly, so you won't click it :O</p>
         </section>
     </div>
 </body>

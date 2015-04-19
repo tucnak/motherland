@@ -26,15 +26,61 @@ form {
     }
 
     p {
-        margin-top: 0 0 1em 0;
+        margin-top: 0 0 1rem 0;
         padding: 0;
+    }
+
+    section {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+
+        h5:first-child {
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        & > div {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+        }
+    }
+
+    div.unit {
+        margin-bottom: 0.5rem;
+    }
+
+    h6 {
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+
+        font-weight: 400;
+        font-size: 0.8rem;
+    }
+
+    div.option {
+        display: block;
+        margin-top: 0.25rem;
+
+        &:first-child { margin-top: 0; }
+    }
+
+    label.required:after {
+        content: '*';
+        position: relative;
+        font-size: 1em;
+        color: red;
     }
 }
 
 input {
     clear: both;
 
-    &[type=text], &[type=password] {
+    &[type=text],
+    &[type=password],
+    &[type=email],
+    &[type=tel],
+    &[type=url] {
         box-sizing: border-box;
         min-height: 1.75em;
         max-width: 100%;
@@ -60,65 +106,12 @@ input {
         }
     }
 
-    &[type=radio], &[type=checkbox] {
-        position: absolute;
-        z-index: -9000;
-        left: -9000px;
-        overflow: hidden;
-        clip: rect(0 0 0 0);
-        height: 1px;
-        width: 1px;
-        margin: -1px;
-        padding: 0;
-        border: 0;
+    &[type=checkbox], &[type=radio] {
+        float: left;
 
         & + label {
-            font-family: @mother-family;
-            font-size: 0.9rem;
-            color: @text-color;
-
-            padding-left: 24px;
-            height: 16px;
-            display: inline-block;
-            line-height: 16px;
-            background-repeat: no-repeat;
-            vertical-align: middle;
-            cursor: pointer;
-            clear: both;
-
-            user-select: none;
-            -moz-user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-
-            &:before {
-                position: absolute;
-                left: 0px;
-                display: block;
-                width: 16px;
-                height: 16px;
-                content: "";
-            }
-        }
-    }
-
-    &[type=radio] {
-        & + label:before {
-            .sprite(0, 0);
-        }
-
-        &:checked + label:before {
-            background-position: 0 -16px;
-        }
-    }
-
-    &[type=checkbox] {
-        & + label:before {
-            .sprite(16px, 0);
-        }
-
-        &:checked + label:before {
-            background-position: 16px -16px;
+            line-height: 1.2rem;
+            padding-left: 20px!important;
         }
     }
 }
@@ -127,7 +120,7 @@ textarea {
     box-sizing: border-box;
     max-width: 100%;
     width: 100%;
-    height: 20em;
+    height: 10em;
     padding: 4px;
 
     background: @input-bgcolor;
@@ -146,4 +139,15 @@ textarea {
     &:focus {
         border-color: @text-color;
     }
+}
+
+input[type=text], input[type=password], textarea {
+
+}
+
+input + .annotation, textarea + .annotation {
+    font-size: 0.5rem;
+    color: @mother-gray;
+    margin-top: 0.2rem;
+    margin-bottom: 0;
 }
