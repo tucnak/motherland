@@ -2,14 +2,6 @@
 .DS_Store
 *~
 
-# We don't want 'em in repository!
-lib/motherland.css
-lib/motherland.min.css
-
-
-# Bootstrapped .gitignore for Node:
-# =================================
-
 # Logs
 logs
 *.log

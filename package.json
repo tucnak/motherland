@@ -1,9 +1,11 @@
 {
   "name": "motherland",
+  "scripts": {
+      "start": "grunt"
+  },
   "version": "1.0.0",
   "description": "A lightweight CSS framework for real men!",
-  "main": "Gruntfile.js",
-  "author": "Ilya Kowalewski",
+  "author": "Ian Byrd",
   "license": "MIT",
   "devDependencies": {
     "grunt": "^0.4.5",

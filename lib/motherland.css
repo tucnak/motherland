@@ -1,0 +1,578 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.unit {
+  display: table;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  border-spacing: 0.25em;
+  margin: -0.25em;
+  width: 101%;
+  width: calc(100% + 2*0.25em);
+  overflow: hidden;
+}
+.unit > div {
+  display: table-cell;
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  overflow: auto;
+}
+.unit > div.center {
+  text-align: center;
+}
+.unit > .last {
+  display: block;
+}
+.unit .unit {
+  width: 100%!important;
+}
+.half {
+  width: 50%;
+}
+.third.one,
+.thirds.one {
+  width: 33.333%;
+}
+.third.two,
+.thirds.two {
+  width: 66.666%;
+}
+.fifth.one,
+.fifths.one {
+  width: 20%;
+}
+.fifth.two,
+.fifths.two {
+  width: 40%;
+}
+.fifth.three,
+.fifths.three {
+  width: 60%;
+}
+.fifth.four,
+.fifths.four {
+  width: 80%;
+}
+a {
+  color: #6b0021;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+h1,
+h2,
+h3 {
+  margin-bottom: 0;
+}
+h1 small,
+h2 small,
+h3 small {
+  font-size: 50%;
+  color: #9c9e94;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+}
+h1 + .annotation {
+  font-weight: 300;
+  font-size: 0.9em;
+  margin-top: 0;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+p {
+  font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0.75em;
+}
+b,
+strong {
+  font-weight: bold;
+}
+i {
+  font-style: italic;
+}
+blockquote {
+  display: block;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
+  color: #696b61;
+  line-height: 1.5;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  border-left: 5px solid #696b61;
+}
+blockquote > p {
+  color: inherit;
+}
+blockquote > p:first-child {
+  margin-top: 0;
+}
+p + blockquote {
+  margin-top: 0.5rem;
+}
+ul {
+  list-style: circle inside;
+}
+ol {
+  list-style: decimal inside;
+}
+ol,
+ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+li {
+  margin-bottom: .75rem;
+  line-height: 1.5;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1rem 0 1rem 2.5rem;
+  font-size: 95%;
+}
+p + ul,
+p + ol {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0px 10px 0px 10px;
+  min-width: 80px;
+  min-height: 30px;
+  background: white;
+  color: #1b2226;
+  font-size: 1em;
+  border: 1px solid;
+  border-top-color: #d6d6d6;
+  border-right-color: #696b61;
+  border-left-color: #ebf4f6;
+  border-bottom-color: #696b61;
+  border-radius: 3px;
+  user-select: none;
+}
+button.primary {
+  min-height: 40px;
+  font-size: 1.2em;
+  background: #f1f8fd;
+  padding: 0px 25px 0px 25px;
+}
+button:focus {
+  outline: none;
+}
+button:hover {
+  cursor: pointer;
+}
+button:active,
+button.pressed {
+  border-bottom-color: #b6b6b6;
+  border-left-color: #696b61;
+  border-right-color: #d6d6d6;
+  border-top-color: #696b61;
+}
+button[disabled] {
+  color: #b5b6af;
+  cursor: default;
+  border-right-color: #b5b6af;
+  border-bottom-color: #b5b6af;
+}
+form {
+  line-height: 0.75em;
+  overflow: hidden!important;
+  padding-bottom: 1rem;
+}
+form label {
+  display: block;
+  font-size: 0.8em;
+  color: #1b2226;
+  margin-bottom: 2px;
+}
+form div.button.box {
+  float: right;
+  padding-right: 0.25em;
+  margin-top: 0.25em;
+}
+form div.button.box button {
+  vertical-align: middle;
+  margin-left: 0.25em;
+}
+form div.button.box button:first-child {
+  margin-left: 0;
+}
+form p {
+  margin-top: 0 0 1rem 0;
+  padding: 0;
+}
+form section {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+form section h5:first-child {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+form section > div {
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+}
+form div.unit {
+  margin-bottom: 0.5rem;
+}
+form h6 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+form div.option {
+  display: block;
+  margin-top: 0.25rem;
+}
+form div.option:first-child {
+  margin-top: 0;
+}
+form label.required:after {
+  content: '*';
+  position: relative;
+  font-size: 1em;
+  color: red;
+}
+input {
+  clear: both;
+}
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+input[type=url] {
+  box-sizing: border-box;
+  min-height: 1.75em;
+  max-width: 100%;
+  width: 100%;
+  padding: 4px;
+  background: #f6efd2;
+  border: 1px solid #e9e9e9;
+  border-top-color: #cccccc;
+  border-radius: 2px;
+  outline: 1px solid transparent;
+  outline-offset: -2px;
+  box-shadow: inset 0 0 0 1px transparent;
+  transition: all 0.3s ease;
+  font-family: "Courier New", "Courier", "Verdana";
+  font-size: 1em;
+  color: #000;
+}
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=url]:focus {
+  outline: 1px solid #000000;
+  outline-offset: -2px;
+}
+input[type=checkbox],
+input[type=radio] {
+  float: left;
+}
+input[type=checkbox] + label,
+input[type=radio] + label {
+  line-height: 1.2rem;
+  padding-left: 20px!important;
+}
+textarea {
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  height: 10em;
+  padding: 4px;
+  background: #f6efd2;
+  border: 1px solid #e9e9e9;
+  border-top-color: #cccccc;
+  border-radius: 2px;
+  outline: 1px solid transparent;
+  outline-offset: -2px;
+  box-shadow: inset 0 0 0 1px transparent;
+  transition: all 0.3s ease;
+  font-family: "Courier New", "Courier", "Verdana";
+  font-size: 1em;
+  color: #000!important;
+}
+textarea:focus {
+  border-color: #1b2226;
+}
+input + .annotation,
+textarea + .annotation {
+  font-size: 0.5rem;
+  color: #696b61;
+  margin-top: 0.2rem;
+  margin-bottom: 0;
+}
+code {
+  font-family: "Monospace", "Courier";
+  padding: .1rem .2rem .1rem .2rem;
+  font-size: .9rem;
+  white-space: pre-wrap;
+  background: #f6efd2;
+  tab-size: 4;
+}
+pre > code {
+  display: block;
+  box-sizing: border-box;
+  line-height: 1.5;
+  margin: 0 -100% 0 -100%;
+  padding: 1.5rem 100% 1.5rem 100%;
+  white-space: pre-wrap;
+  border: 0;
+  border-radius: 0;
+  padding-left: -50em;
+}
+@media screen and (orientation: portrait) and (min-width: 0px) {
+  pre > code {
+    font-size: 7px;
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 321px) {
+  pre > code {
+    font-size: 8px;
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 385px) {
+  pre > code {
+    font-size: 9px;
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 412px) {
+  pre > code {
+    font-size: 10px;
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 600px) {
+  pre > code {
+    font-size: 12px;
+  }
+}
+@media screen and (orientation: portrait) and (min-width: 768px) {
+  pre > code {
+    font-size: .9rem;
+  }
+}
+pre + p {
+  margin-top: 1.5rem;
+}
+p + pre {
+  margin-top: 1.5rem;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+div.container {
+  max-width: 800px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+div.container > div.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+div.container.huge {
+  max-width: 960px;
+}
+.headstock {
+  padding-top: 1.5em;
+}
+.headstock h1 {
+  font-size: 2.333rem;
+}
+.bearing {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.center {
+  margin: auto;
+}
+section {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+hr.put {
+  margin-top: 20px;
+  height: 10px;
+  border: 0;
+}
+hr.put.lower {
+  box-shadow: inset 0 10px 10px -10px #dcdec4;
+}
+hr.put.higher {
+  box-shadow: inset 0 -10px 10px -10px #dcdec4;
+}
+hr.minor {
+  margin-top: 10px;
+  border: 0;
+  border-bottom: 1px dashed #ccc;
+  background: #999;
+}
+hr.fancy {
+  margin-top: 15px;
+  margin-bottom: -10px;
+  padding: 0;
+  border: none;
+  border-top: medium double #333;
+  color: #333;
+  text-align: center;
+}
+hr.fancy:after {
+  content: "§";
+  font-family: "Helvetica", "Arial";
+  display: inline-block;
+  position: relative;
+  top: -0.6em;
+  font-size: 1.5em;
+  padding: 0 0.25rem;
+  background: white;
+}
