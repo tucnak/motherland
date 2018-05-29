@@ -12,4 +12,4 @@ fighting at the front of user experience, where little mistakes do matter. Your 
 user interface that will feel smooth for the end user. Right now, go on and just ask yourself, would
 you want your users to get distracted with some hippy shit? — We don't.
 
-Copyright (c) 2015 Ilya Kowalewski
+Copyright (c) 2018 Ian Byrd
