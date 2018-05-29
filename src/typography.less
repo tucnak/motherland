@@ -1,11 +1,11 @@
 a {
-    color: @link-color;
+    color: @mother-reddish;
+	font-weight: bold;
     cursor: pointer;
     text-decoration: underline;
 }
 
 h1, h2, h3 {
-    font-family: @mother-family;
     margin-bottom: 0;
 
     small {
@@ -18,8 +18,9 @@ h1 {
     font-size: 2rem;
     font-weight: 700;
 
+	letter-spacing: 0.05rem;
+
     & + .annotation {
-        font-family: @mother-family;
         font-weight: 300;
         font-size: 0.9em;
         margin-top: 0;
@@ -27,8 +28,10 @@ h1 {
 }
 
 h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 600;
+
+	margin-top: 1.5rem;
 }
 
 h3 {
@@ -38,46 +41,72 @@ h3 {
 
 p {
     font-family: @mother-family;
-    font-size: 0.9em;
-    line-height: 1.25em;
+    font-size: 1rem;
+    line-height: 1.5;
 
     margin-top: 0.75em;
 }
 
-code {
-    font-family: "Monospace", "Courier";
-    padding: .1rem .2rem;
-    margin: 0 .1rem;
-    font-size: 90%;
-    white-space: nowrap;
-    background: #F1F1F1;
-    border: 1px solid #E1E1E1;
-    border-radius: 4px;
+b, strong {
+	font-weight: bold;
 }
 
+i {
+	font-style: italic;
+}
+
+// Blockquote
+blockquote {
+	display: block;
+	padding-top: .5em;
+	padding-bottom: .5em;
+
+	font-family: @mother-family;
+	color: @mother-gray;
+	line-height: 1.5;
+
+	box-sizing: border-box;
+	padding-left: 1rem;
+	border-left: 5px solid @mother-gray;
+
+	& > p {
+		color: inherit;
+
+		&:first-child { margin-top: 0 }
+	}
+
+	p + & {
+		margin-top: 0.5rem;
+	}
+}
+
+// Lists
 ul {
-    list-style: square;
+	list-style: circle inside;
 }
 
 ol {
-    &.roman {
-        list-style: upper-roman;
-    }
+	list-style: decimal inside;
 }
 
-// Nested lists
-li ul, li ol {
-    padding: 0.5rem 0 0.5rem 1.5rem;
+ol, ul {
+	padding-left: 0;
+	margin-top: 0;
 }
 
 li {
-    margin-bottom: 0.25rem;
-
-    & li {
-        margin-bottom: 0;
-    }
+	margin-bottom: .75rem;
+	line-height: 1.5;
 }
 
-* {
-    font-family: @mother-family;
+ul ul, ul ol, ol ol, ol ul {
+	margin: 1rem 0 1rem 2.5rem;
+	font-size: 95%;
+}
+
+p {
+	& + ul, & + ol {
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
 }

@@ -4,24 +4,44 @@
 @import "typography.less";
 @import "buttons.less";
 @import "forms.less";
+@import "code.less";
 
 body {
     margin: 0;
+	overflow-x: hidden;
 }
 
 div.container {
-    width: 960px;
-    margin: auto;
+    max-width: 800px;
     box-sizing: border-box;
-    padding-left: 15px;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	// For outers
+	padding-left: 15px;
+	padding-right: 15px;
+
+	& > & {
+		padding-left: 0;
+		padding-right: 0;
+	}
 
     &.huge {
-        width: 1160px;
+        max-width: 960px;
     }
 }
 
+.headstock {
+	padding-top: 1.5em;
+
+	h1 {
+		font-size: 2.333rem;
+	}
+}
+
 .bearing {
-    margin-top: 1em;
+    margin-top: 2em;
     margin-bottom: 2em;
 }
 
@@ -30,8 +50,8 @@ div.container {
 }
 
 section {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-top: 1em;
+    margin-bottom: 2em;
 }
 
 hr {

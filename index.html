@@ -11,8 +11,10 @@
         }
 
         .grid-demo {
-            width: 75%;
+            width: 100%;
             font-size: 0.75em;
+
+			font-family: 'Open Sans', 'Helvetica Neue', 'Arial', sans-serif;
         }
 
         .grid-demo .unit > div {
@@ -33,7 +35,7 @@
     </style>
 </head>
 <body>
-    <div class="huge container">
+    <div class="huge headstock container">
         <h1>Motherland CSS</h1>
         <p class="annotation">A lightweight CSS framework for the real men!</p>
     </div>
@@ -89,13 +91,21 @@
             </div>
             <p>The main reason to use subdivisional system, not column-driven, comes from the point that subdivisions are much more native than columns approach. While developing the user interface, columns might appear distracting, while subdivisions feel smooth. A few words about <code>.row</code> class, that is common in most CSS frameworks around. We don't find it native at all, especially for complicated layout cases, that's why we label such block with a <code>.unit</code> class.</p>
         </section>
-        <section name="buttons">
+		<section name="quote">
+			<h2>Blockquotes</h2>
+			<p><blockquote>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+				dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</blockquote></p>
+		</section>
+		<section name="buttons">
             <h2>Forms</h2>
             <p>That's where old good school comes in. Aren't you tired with all the smoothy-fuzzy roundy-poundy modern input fields and all that? &mdash; We are. Here are some adorable design solutions that you must like! Let's come up with common case, where you might need some forms'n'controls, for instance, a preferences page. We do override all styles for most controls, such as: <code>text</code>, <code>checkbox</code>, <code>radio</code> to fit the old school "feel".</p>
-            <div class="bearing form-demo">
+            <div class="form-demo">
                 <form>
                     <section name="userinfo">
-                        <h5>Hehehue</h5>
                         <div class="unit">
                             <div class="one half">
                                 <label for="info-name">Name</label>
@@ -162,24 +172,42 @@
         </section>
         <section name="lists">
             <h2>Lists</h2>
-            <div class="unit">
-                <div class="last one half">
-                    <ul>
-                        <li>Bazooka</li>
-                        <li>
-                            Pistols
-                            <ol>
-                                <li>Colt</li>
-                                <li>Desert Eagle</li>
-                                <li>TT</li>
-                            </ol>
-                        </li>
-                        <li>M16</li>
-                        <li>Flamethrower</li>
-                    </ul>
-                </div>
-            </div>
+			<p>This is a list demo. I am the M-A-N now!</p>
+            <ul>
+                <li>Spaghetti</li>
+                <li>
+                    Booze
+                    <ol>
+                        <li>Sambuka</li>
+                        <li>Vodka</li>
+                        <li>Cider</li>
+                    </ol>
+                </li>
+                <li>Bread and butter</li>
+                <li>A pint of milk</li>
+            </ul>
+			<p>Now you've seen it all!</p>
         </section>
+		<section name="code">
+			<h2>Code</h2>
+			<p>Look at these fancy code blocks:</p>
+			<pre><code>#include &lt;iostream&gt;
+#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+#include &lt;cstdlib&gt;
+
+using namespace std;
+
+int main()
+{
+    char *txt = &quot;Sanfoundry Linux Training&quot;;
+    char *pat = &quot;nux&quot;;
+    int q = 101;
+    search(pat, txt, q);
+    return 0;
+}</code></pre>
+		<p>Magic, innit?</p>
+		</section>
     </div>
 </body>
 </html>

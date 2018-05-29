@@ -32,14 +32,12 @@ button {
         cursor: pointer;
     }
 
-    &:active {
+    &:active, &.pressed {
         // reverse
-        border-bottom-color: #d6d6d6;
+        border-bottom-color: #b6b6b6;
         border-left-color: @button-bdcolor;
-        border-right-color: #ebf4f6;
+        border-right-color: #d6d6d6;
         border-top-color: @button-bdcolor;
-
-        color: @mother-reddish;
     }
 
     &[disabled] {
