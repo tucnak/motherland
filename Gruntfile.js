@@ -9,7 +9,7 @@ module.exports = function (grunt) {
             },
 
             files: {
-              'lib/motherland.css': 'src/main.less'
+              'dist/motherland.css': 'src/main.less'
             }
           }
       },
@@ -20,7 +20,7 @@ module.exports = function (grunt) {
         },
         target: {
           files: {
-            'lib/motherland.min.css': 'lib/motherland.css'
+            'dist/motherland.min.css': 'dist/motherland.css'
           }
         }
       },
@@ -33,6 +33,7 @@ module.exports = function (grunt) {
       }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.registerTask('default', ['less', 'cssmin']);
   grunt.registerTask('dev', ['less', 'watch'])
 }

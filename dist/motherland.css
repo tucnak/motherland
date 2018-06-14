@@ -317,13 +317,12 @@ button[disabled] {
   border-bottom-color: #b5b6af;
 }
 form {
-  line-height: 0.75em;
   overflow: hidden!important;
   padding-bottom: 1rem;
 }
 form label {
   display: block;
-  font-size: 0.8em;
+  font-size: .75rem;
   color: #1b2226;
   margin-bottom: 2px;
 }
@@ -367,7 +366,7 @@ form h6 {
 }
 form div.option {
   display: block;
-  margin-top: 0.25rem;
+  margin-top: 0.25em;
 }
 form div.option:first-child {
   margin-top: 0;
@@ -387,7 +386,7 @@ input[type=email],
 input[type=tel],
 input[type=url] {
   box-sizing: border-box;
-  min-height: 1.75em;
+  min-height: 2em;
   max-width: 100%;
   width: 100%;
   padding: 4px;
@@ -417,7 +416,7 @@ input[type=radio] {
 }
 input[type=checkbox] + label,
 input[type=radio] + label {
-  line-height: 1.2rem;
+  line-height: 1.2em;
   padding-left: 20px!important;
 }
 textarea {
