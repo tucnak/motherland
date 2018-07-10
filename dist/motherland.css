@@ -181,7 +181,6 @@ table {
 }
 a {
   color: #6b0021;
-  font-weight: bold;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -219,6 +218,9 @@ p {
   font-size: 1rem;
   line-height: 1.5;
   margin-top: 0.75em;
+}
+p a {
+  font-weight: bold;
 }
 b,
 strong {
@@ -282,7 +284,7 @@ button {
   min-height: 30px;
   background: white;
   color: #1b2226;
-  font-size: 1em;
+  font-size: .9rem;
   border: 1px solid;
   border-top-color: #d6d6d6;
   border-right-color: #696b61;
@@ -442,9 +444,9 @@ textarea:focus {
 }
 input + .annotation,
 textarea + .annotation {
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   color: #696b61;
-  margin-top: 0.2rem;
+  margin-top: 0.3rem;
   margin-bottom: 0;
 }
 code {
@@ -465,6 +467,8 @@ pre > code {
   border: 0;
   border-radius: 0;
   padding-left: -50em;
+}
+@media screen and (orientation: portrait) {
 }
 @media screen and (orientation: portrait) and (min-width: 0px) {
   pre > code {
